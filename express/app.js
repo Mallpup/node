@@ -1,7 +1,9 @@
 var express = require('express');
 var app = express ();
 
-app.get('/', function(request, response){
+app.use(express.static('public'));
+
+app.get('/cheese', function(request, response){
   response.sendFile(__dirname + '/public/index.html');
 });
 
